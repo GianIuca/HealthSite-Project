@@ -1,11 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
-
 import React from "react";
-// importing Link from react-router-dom to navigate to
-// different end points.
-import { Link } from "react-router-dom";
-
 function Home() {
   return (
       <div className="homepage">
@@ -14,27 +7,6 @@ function Home() {
         </div>
 
         <div className="container">
-          <div className="main-nav">
-            <img src="img/dumbbell.png" alt="Health" className="logo"/>
-
-              <ul className="main-menu">
-                <li>
-                  {/* Endpoint to route to Home component */}
-                  <Link to="/rezepte">Rezepte</Link>
-                </li>
-                <li>
-                  {/* Endpoint to route to Home component */}
-                  <Link to="/workout">Workout</Link>
-                </li>
-                <li>
-                  {/* Endpoint to route to Home component */}
-                  <Link to="/standorte">Standorte</Link>
-                </li>
-              </ul>
-
-              <img src="img/295128.png" alt="Login" className="login"/>
-          </div>
-
           <section className="showcase">
             <div className="content">
 

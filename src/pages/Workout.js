@@ -1,19 +1,10 @@
+
+import React from "react";
 function Workout() {
     return (
         <div className="workout">
 
             <div className="container">
-                <nav className="main-nav">
-                    <img src="img/dumbbell.png" alt="Health" className="logo"/>
-
-                    <ul className="main-menu">
-                        <li><a href="#">Rezepte</a></li>
-                        <li><a href="#">Workouts</a></li>
-                        <li><a href="#">Standorte</a></li>
-                    </ul>
-
-                    <img src="img/295128.png" alt="Login" className="login"/>
-                </nav>
 
                 <section className="work">
                     <div className="out">

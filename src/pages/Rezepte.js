@@ -1,12 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
 import React from "react";
 // importing Link from react-router-dom to navigate to
 // different end points.
 import { Link } from "react-router-dom";
 
-function Standorte() {
+function Rezepte() {
     return (
         <div className="homepage">
             <div className="menu-btn">
@@ -14,32 +11,6 @@ function Standorte() {
             </div>
 
             <div className="container">
-                <div className="main-nav">
-                    <img src="img/dumbbell.png" alt="Health" className="logo"/>
-
-                    <ul className="main-menu">
-                        <li>
-                            {/* Endpoint to route to Home component */}
-                            <Link to="/rezepte">Rezepte</Link>
-                        </li>
-                        <li>
-                            {/* Endpoint to route to Home component */}
-                            <Link to="/workout">Workout</Link>
-                        </li>
-                        <li>
-                            {/* Endpoint to route to Home component */}
-                            <Link to="/standorte">Standorte</Link>
-                        </li>
-                    </ul>
-
-                    <img src="img/295128.png" alt="Login" className="login"/>
-                </div>
-
-                <section className="showcase">
-                    <div className="content">
-
-                    </div>
-                </section>
 
                 <section className="xbox">
                     <div className="about">
@@ -56,20 +27,6 @@ function Standorte() {
                     </div>
                 </section>
 
-                <section className="follow">
-                    <p>Follow Health Site</p>
-                    <a href="https://facebook.com">
-                        <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook"/>
-                    </a>
-                    <a href="https://twitter.com">
-                        <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter"/>
-                    </a>
-                    <a href="https://linkedin.com">
-                        <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin"/>
-                    </a>
-                </section>
-            </div>
-
             <footer className="footer">
                 <div className="footer-inner">
                     <div><i className="fas fa-globe fa-2x"></i> Deutsch (Schweiz)</div>
@@ -84,8 +41,9 @@ function Standorte() {
                     </ul>
                 </div>
             </footer>
+            </div>
         </div>
     );
 }
 
-export default Standorte;
+export default Rezepte;
