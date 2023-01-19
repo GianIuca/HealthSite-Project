@@ -1,10 +1,12 @@
 import React from "react";
+import logo from "./dumbbell.png"
+import login from "./295128.png"
 import './App.css';
 
 export default function Navbar(){
     return(
         <nav className="main-nav">
-            <img src="/img/dumbbell.png" alt="Health" className="logo"/>
+            <img src={logo} alt="Health" className="logo"/>
             <a href="/home">
                 Health Site
             </a>
@@ -13,7 +15,7 @@ export default function Navbar(){
                 <li><a href="/workout">Workouts</a></li>
                 <li><a href="/standorte">Standorte</a></li>
             </ul>
-            <img src="/img/295128.png" alt="Login" className="login"/>
+            <img src={login} alt="Login" className="login"/>
         </nav>
     )
 }
