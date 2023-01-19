@@ -1,128 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// importing components from react-router-dom package
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom";
+
+// import Home component
+import Home from "./Home";
+// import About component
+import Workout from "./Workout";
+// import ContactUs component
+import Standorte from "./Standorte";
+
+import Rezepte from "./Rezepte";
+
 
 function App() {
-  return (
-      <div className="homepage">
-        <div className="menu-btn">
-          <i className="fas fa-bars fa-2x"></i>
-        </div>
+    return (
+        <>
+            {/* This is the alias of BrowserRouter i.e. Router */}
+            <Router>
+                <Routes>
+                    {/* This route is for home component
+          with exact path "/", in component props
+          we passes the imported component*/}
+                    <Route exact path="/home" component={Home} />
 
-        <div className="container">
-          <nav className="main-nav">
-            <img src="src/img/dumbbell.png" alt="Health" className="logo"/>
+                    {/* This route is for about component
+          with exact path "/about", in component
+          props we passes the imported component*/}
+                    <Route path="/workout" component={Workout} />
 
-              <ul className="main-menu">
-                <li><a href="#">Rezepte</a></li>
-                <li><a href="#">Workouts</a></li>
-                <li><a href="#">Standorte</a></li>
-              </ul>
+                    {/* This route is for contactus component
+          with exact path "/contactus", in
+          component props we passes the imported component*/}
+                    <Route path="/standorte" component={Standorte} />
 
-              <img src="src/img/295128.png" alt="Login" className="login"/>
-          </nav>
+                    {/* If any route mismatches the upper
+          route endpoints then, redirect triggers
+          and redirects app to home component with to="/" */}
 
-          <section className="showcase">
-            <div className="content">
+                    <Route path="/rezept" component={Rezepte} />
 
-            </div>
-          </section>
-
-          <section className="home-cards">
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </section>
-
-          <section className="xbox">
-            <div className="about">
-              <h2>About Us</h2>
-            </div>
-            <div className="content">
-              <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-              <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet.</p>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonum.</p>
-              <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-            </div>
-          </section>
-
-          <section className="home-cards">
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </section>
-
-          <section className="follow">
-            <p>Follow Health Site</p>
-            <a href="https://facebook.com">
-              <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook"/>
-            </a>
-            <a href="https://twitter.com">
-              <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter"/>
-            </a>
-            <a href="https://linkedin.com">
-              <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin"/>
-            </a>
-          </section>
-        </div>
-        <section className="links">
-          <div className="links-inner">
-            <ul>
-
-            </ul>
-            <ul>
-
-            </ul>
-            <ul>
-
-            </ul>
-            <ul>
-
-            </ul>
-            <ul>
-
-            </ul>
-            <ul>
-
-            </ul>
-          </div>
-        </section>
-
-        <footer className="footer">
-          <div className="footer-inner">
-            <div><i className="fas fa-globe fa-2x"></i> Deutsch (Schweiz)</div>
-            <ul>
-              <li><a href="#">Jaime Oberle</a></li>
-              <li><a href="#">M306</a></li>
-              <li><a href="#">Mattia Loiarro</a></li>
-              <li><a href="#">Jaspreet Singh</a></li>
-              <li><a href="#">Gianluca Ferrara</a></li>
-              <li><a href="#">Tabea Bolliger</a></li>
-              <li><a href="#">&copy; Health Site 2022</a></li>
-            </ul>
-          </div>
-        </footer>
-      </div>
+                    {/* If any route mismatches the upper
+          route endpoints then, redirect triggers
+          and redirects app to home component with to="/" */}
+                    <Navigate to="/home" />
+                </Routes>
+            </Router>
+        </>
     );
 }
 
